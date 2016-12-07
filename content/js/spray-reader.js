@@ -30,7 +30,7 @@ SprayReader.prototype = {
       }
 
       // Double up on long words and words with commas.
-      if((allWords[i].indexOf(',') != -1 || allWords[i].indexOf(':') != -1 || allWords[i].indexOf('-') != -1 || allWords[i].indexOf('(') != -1|| allWords[i].length > 8) && allWords[i].indexOf('.') == -1){
+      if((!isNaN(allWords[i]) || allWords[i].indexOf(',') != -1 || allWords[i].indexOf(':') != -1 || allWords[i].indexOf('-') != -1 || allWords[i].indexOf('(') != -1|| allWords[i].length > 8) && allWords[i].indexOf('.') == -1){
         tmpWords.splice(t+1, 0, allWords[i]);
         tmpWords.splice(t+1, 0, allWords[i]);
         t++;
